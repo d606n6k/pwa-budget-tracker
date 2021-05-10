@@ -1,25 +1,22 @@
 // The FILES_TO_CACHE variable keeps track of each request to store in the
 // cache.
+const CACHE_NAME = "static-cache-v2";
+const DATA_CACHE_NAME = "data-cache-v1";
 
 //🔑 This is an array of files only, attempting to include entire folders won't
 // work.
 const FILES_TO_CACHE = [
   "/",
-  "/public/index.html",
-  "/public/style.css",
-  "/public/manifest.webmanifest",
-  "/favicon.ico",
-  "/public/icons/icon-192x192.png",
-  "/public/icons/icon-512x512.png",
+  "/styles.css",
+  "/db.js",
+  "/index.js",
+  "/manifest.json",
+  "/icons/icon-192x192.png",
+  "/icons/icon-512x512.png",
 ];
-
-const CACHE_NAME = "static-cache-v2";
-const DATA_CACHE_NAME = "data-cache-v1";
 
 // install
 self.addEventListener("install", function (evt) {
-  // open the  cache and call addAll, passing in FILES_TO_CACHE to have the
-  // service worker request these items and save them in the cache
   evt.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Your files were pre-cached successfully! ✅");
