@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/license-MIT-blue" />
 </p>
 
-# The Workout Tracker
+# The Progressive Budget Tracking Web App
 
 ![The PWA Budget Tracker Homepage Image](./public/images/screenshot.png)
 
